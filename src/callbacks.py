@@ -23,13 +23,14 @@ def update_graph(switch_name, switch_type, manufacturer):
     df.rename(columns={"Time Wtd. Total": "Total"}, inplace=True)
 
     # Min-Max Normalization 0 to 100
-    scaler = MinMaxScaler()
-    df[["Push Feel", "Wobble", "Sound", "Context", "Other", "Total"]] = (
-        scaler.fit_transform(
-            df[["Push Feel", "Wobble", "Sound", "Context", "Other", "Total"]]
+    if len(df) > 0:
+        scaler = MinMaxScaler()
+        df[["Push Feel", "Wobble", "Sound", "Context", "Other", "Total"]] = (
+            scaler.fit_transform(
+                df[["Push Feel", "Wobble", "Sound", "Context", "Other", "Total"]]
+            )
+            * 100
         )
-        * 100
-    )
 
     # Melt the DataFrame for easier plotting
     melted_df = df.melt(
