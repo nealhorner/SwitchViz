@@ -1,0 +1,13 @@
+* {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+#dropdown-container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+#dropdown-container > div {
+  width: 400px;
+}
