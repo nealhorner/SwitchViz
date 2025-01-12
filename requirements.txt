@@ -1,6 +1,0 @@
-dash
-pandas
-Flask==3.0.3
-Flask-Caching
-scikit-learn
-requests
