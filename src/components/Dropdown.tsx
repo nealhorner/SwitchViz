@@ -51,7 +51,10 @@ const Dropdown: React.FC<DropdownProps> = ({
                     placeholder={placeholder}
                 />
                 <div>
-                    <FontAwesomeIcon icon={faXmark} />
+                    <FontAwesomeIcon
+                        icon={faXmark}
+                        onClick={() => clearSelections()}
+                    />
                     <FontAwesomeIcon icon={faCaretDown} />
                 </div>
                 <ul>
@@ -59,9 +62,7 @@ const Dropdown: React.FC<DropdownProps> = ({
                         <li
                             key={option}
                             className="cursor-pointer"
-                            onClick={(option) => {
-                                handleSelectionChange(option);
-                            }}
+                            onClick={() => handleSelectionChange(option)}
                         >
                             {selectedItems.includes(option) ? (
                                 <FontAwesomeIcon icon={faXmark} />
