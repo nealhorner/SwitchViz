@@ -11,6 +11,7 @@ const Metrics: React.FC = () => {
                     id="cats"
                     label="Keyboard Switch Names"
                     options={['Option 1', 'Option 2', 'Option 3']}
+                    placeholder=""
                 />
             </div>
         </div>

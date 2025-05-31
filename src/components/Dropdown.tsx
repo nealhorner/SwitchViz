@@ -59,7 +59,7 @@ const Dropdown: React.FC<DropdownProps> = ({
                         <li
                             key={option}
                             className="cursor-pointer"
-                            onClick={(option) => {
+                            onClick={() => {
                                 handleSelectionChange(option);
                             }}
                         >
